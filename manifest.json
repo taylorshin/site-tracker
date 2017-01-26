@@ -5,13 +5,25 @@
     "description": "This extension allows users to track the sites they go to.",
     "version": "1.0",
 
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*.facebook.com/*, *://*.youtube.com/*, http://*.google.com/, https://*.google.com/"
+            ],
+            "js": ["content.js"],
+            "run_at": "document_end"
+        }
+    ],
+
     "browser_action": {
         "default_icon": "icon.png",
         "default_popup": "popup.html",
         "default_title": "Site Tracker"
     },
 
+    "content_security_policy": "script-src 'self' https://code.jquery.com; object-src 'self'",
+
     "permissions": [
-        "activeTab"
+        "activeTab", "storage"
     ]
 }
