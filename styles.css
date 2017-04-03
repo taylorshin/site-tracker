@@ -1,0 +1,16 @@
+#visited_div {
+    overflow-y: auto;
+    max-height: 250px;
+}
+
+#header_div {
+    text-align: center;
+}
+
+#clrBtn {
+    width: 60px;
+}
+
+h4 {
+    text-align: center;
+}

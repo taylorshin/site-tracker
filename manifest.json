@@ -5,13 +5,18 @@
     "description": "This extension allows users to track the sites they go to.",
     "version": "1.0",
 
+    "permissions": [
+        "webNavigation", "topSites", "tabs", "storage"
+    ],
+
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+    },
+
     "browser_action": {
         "default_icon": "icon.png",
         "default_popup": "popup.html",
         "default_title": "Site Tracker"
-    },
-
-    "permissions": [
-        "webNavigation", "topSites", "tabs", "storage"
-    ]
+    }
 }
