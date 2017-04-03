@@ -7,6 +7,10 @@
     text-align: center;
 }
 
+#main_div {
+    min-width: 130px;
+}
+
 #clrBtn {
     width: 60px;
 }
